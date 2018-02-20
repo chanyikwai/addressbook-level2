@@ -111,6 +111,13 @@ public class UniquePersonList implements Iterable<Person> {
     }
 
     /**
+     * Sorts all persons in the list lexicographically
+     */
+    public void sortByName() {
+        Collections.sort(internalList);
+    }
+
+    /**
      * Removes the equivalent person from the list.
      *
      * @throws PersonNotFoundException if no such person could be found in the list.

@@ -23,6 +23,7 @@ import seedu.addressbook.commands.IncorrectCommand;
 import seedu.addressbook.commands.ListCommand;
 import seedu.addressbook.commands.ViewAllCommand;
 import seedu.addressbook.commands.ViewCommand;
+import seedu.addressbook.commands.SortCommand;
 import seedu.addressbook.data.exception.IllegalValueException;
 import seedu.addressbook.data.person.Address;
 import seedu.addressbook.data.person.Email;
@@ -65,6 +66,12 @@ public class ParserTest {
      */
 
     @Test
+    public void parse_sortCommand_parsedCorrectly() {
+        final String input = "sort";
+        parseAndAssertCommandType(input, SortCommand.class);
+    }
+
+    @Test
     public void parse_helpCommand_parsedCorrectly() {
         final String input = "help";
         parseAndAssertCommandType(input, HelpCommand.class);
@@ -89,7 +96,7 @@ public class ParserTest {
     }
 
     /*
-     * Tests for ingle index argument commands ===============================================================
+     * Tests for single index argument commands ===============================================================
      */
 
     @Test

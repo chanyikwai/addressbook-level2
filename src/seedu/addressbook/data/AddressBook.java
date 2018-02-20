@@ -84,6 +84,13 @@ public class AddressBook {
     }
 
     /**
+     * Sorts the address book in lexicographical order
+     */
+    public void sortAllPersonsByName() {
+        allPersons.sortByName();
+    }
+
+    /**
      * Returns true if an equivalent person exists in the address book.
      */
     public boolean containsPerson(ReadOnlyPerson key) {
