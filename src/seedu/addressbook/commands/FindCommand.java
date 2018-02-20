@@ -1,6 +1,11 @@
 package seedu.addressbook.commands;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Collections;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Set;
 
 import seedu.addressbook.data.person.ReadOnlyPerson;
 
@@ -55,6 +60,12 @@ public class FindCommand extends Command {
         return matchedPersons;
     }
 
+    /**
+     * Converts the set of specified keywords to lower-case.
+     *
+     * @param keywords for searching
+     * @return list of keywords in lower-case
+     */
     private Collection<String> convertKeywordsToLowerCase(Set<String> keywords) {
         final Collection<String> keywordsInLowerCase = new ArrayList<>();
         for (String keyword : keywords) {
@@ -63,6 +74,12 @@ public class FindCommand extends Command {
         return keywordsInLowerCase;
     }
 
+    /**
+     * Converts set of all words in name to lower-case.
+     *
+     * @param wordsInName for comparison
+     * @return set of words in name in lower-case
+     */
     private Set<String> convertWordsInNameToLowerCase(Set<String> wordsInName) {
         final Set<String> wordsInNameInLowerCase = new HashSet<>();
         for (String wordInName : wordsInName) {
